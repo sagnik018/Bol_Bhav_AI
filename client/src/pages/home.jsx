@@ -1,12 +1,23 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useState } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
+  const [language, setLanguage] = useState("hindi");
+  
+  const toggleLanguage = () => {
+    const newLang = language === "hindi" ? "english" : "hindi";
+    setLanguage(newLang);
+    localStorage.setItem("language", newLang);
+  };
+  
   return (
     <div className="container">
-      <h2>बाज़ार में सही दाम पाएं</h2>
+      <button onClick={toggleLanguage} className="lang-toggle">
+        {language === "hindi" ? "EN" : "हि"}
+      </button>
+      <h2>{language === "hindi" ? "बाज़ार में सही दाम पाएं" : "Get the Right Price in the Market"}</h2>
       <button onClick={() => navigate("/negotiate")}>
-        बातचीत शुरू करें
+        {language === "hindi" ? "बातचीत शुरू करें" : "Start Negotiation"}
       </button>
     </div>
   );
