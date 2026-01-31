@@ -26,8 +26,35 @@ export default function Negotiation() {
       <button onClick={toggleLanguage} className="lang-toggle">
         {language === "hindi" ? "EN" : "हि"}
       </button>
-      <h2>{language === "hindi" ? "अपना भाव बोलिए" : "State Your Price"}</h2>
-      <MicButton onSpeech={handleSpeech} language={language} />
+      
+      <div className="card">
+        <h2>{language === "hindi" ? "अपना भाव बोलिए" : "State Your Price"}</h2>
+        <p className="subtitle">
+          {language === "hindi" 
+            ? "माइक्रोफोन बटन दबाएं और अपनी कीमत बोलें" 
+            : "Click the microphone button and speak your price"
+          }
+        </p>
+        
+        <div className="voice-interface">
+          <MicButton onSpeech={handleSpeech} language={language} />
+          
+          <div className="voice-tips">
+            <h4>{language === "hindi" ? "उदाहरण:" : "Examples:"}</h4>
+            <div className="example-phrases">
+              <span className="phrase">
+                {language === "hindi" ? "सौ रुपये" : "One hundred rupees"}
+              </span>
+              <span className="phrase">
+                {language === "hindi" ? "पचास रुपये" : "Fifty rupees"}
+              </span>
+              <span className="phrase">
+                {language === "hindi" ? "दो सौ" : "Two hundred"}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
