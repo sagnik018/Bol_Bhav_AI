@@ -10,7 +10,7 @@ export default function MicButton({ onSpeech }) {
   
     return (
       <button className="mic-btn" onClick={startMic}>
-        🎤 Listening...
+        🎤 बोलिए
       </button>
     );
   }
