@@ -4,6 +4,6 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use("/api", require("./routes/apiRoutes"));
+app.use("/api", require("../routes/apiRoutes"));
 
 module.exports = app;

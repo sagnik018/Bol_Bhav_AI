@@ -1,4 +1,4 @@
-const { getGuidance } = require("../services/negotiationService");
+const { getGuidance } = require("./negotiationService");
 
 let lastResult = null;
 

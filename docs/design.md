@@ -26,3 +26,35 @@ Guidance Returned to Vendor
 - No sensitive data stored
 - Rate-limited APIs
 - Input sanitization
+
+Structure of the Code
+Bol_Bhav_AI/
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── app/
+│   │   │   ├── app.jsx     # Main React app with routing
+│   │   │   └── index.js    # Entry point
+│   │   ├── components/
+│   │   │   └── MicButton.jsx # Voice recording component
+│   │   ├── pages/
+│   │   │   ├── Home.jsx    # Landing page
+│   │   │   ├── Negotiation.jsx # Voice input page
+│   │   │   └── Result.jsx  # Results display
+│   │   ├── services/
+│   │   │   └── api.js      # API communication
+│   │   └── styles/         # CSS files
+│   └── package.json        # React dependencies
+├── server/                 # Node.js backend
+│   ├── app/
+│   │   ├── app.js          # Express app setup
+│   │   └── server.js       # Server entry point
+│   ├── controllers/
+│   │   ├── negotiationController.js # Main logic
+│   │   ├── negotiationService.js    # Business logic
+│   │   └── priceService.js         # Price data
+│   ├── models/              # Data models (MongoDB)
+│   ├── routes/
+│   │   └── apiRoutes.js    # API endpoints
+│   └── config/
+│       └── db.js           # Database configuration
+└── docs/                   # Documentation
