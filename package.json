@@ -1,0 +1,13 @@
+{
+  "name": "bol-bhav-ai-fullstack",
+  "version": "1.0.0",
+  "description": "Voice-based negotiation assistance platform",
+  "scripts": {
+    "start": "start.bat",
+    "dev": "concurrently \"cd server && node app/server.js\" \"cd client && npm start\"",
+    "install-all": "cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
